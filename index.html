@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>El Pollo Loco</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./styles.css" />
+
+		<!-- Favicon -->
+		<link rel="icon" href="img/sombrero.png" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="./img/sombrero.png">
+
+		<!-- Javascript -->
+		<script src="./models/drawable-objects.class.js" defer></script>
+		<script src="./models/status-bars/statusbar-endboss.class.js" defer></script>
+		<script src="./models/status-bars/statusbar-overlay-icon-endboss.class.js" defer></script>
+		<script src="./models/status-bars/statusbar-health.class.js" defer></script>
+		<script src="./models/status-bars/statusbar-bottles.class.js" defer></script>
+		<script src="./models/status-bars/statusbar-coins.class.js" defer></script>
+		<script src="./models/sounds.class.js" defer></script>
+		<script src="./cache/character-images.class.js"></script>
+		<script src="./cache/endboss-images.class.js"></script>
+		<script src="./models/movable-object.class.js" defer></script>
+		<script src="./models/character.class.js" defer></script>
+		<script src="./models/enemies/chicken.class.js" defer></script>
+		<script src="./models/enemies/chicken-dies.class.js" defer></script>
+		<script src="./models/enemies/chick.class.js" defer></script>
+		<script src="./models/enemies/chick-dies.class.js" defer></script>
+		<script src="./models/enemies/endboss.class.js" defer></script>
+		<script src="./models/nature/clouds.class.js" defer></script>
+		<script src="./models/nature/background-object.class.js" defer></script>
+		<script src="./models/collectables/collectable-bottles-air.class.js" defer></script>
+		<script src="./models/keyboard.class.js" defer></script>
+		<script src="./models/world.class.js" defer></script>
+		<script src="./models/collectables/collectable-coins.class.js" defer></script>
+		<script src="./models/throwable-object.class.js" defer></script>
+		<script src="./models/collectables/bottles-splashed.class.js" defer></script>
+		<script src="./models/collectables/collectable-bottles-ground.class.js" defer></script>
+		<script src="./models/level.class.js" defer></script>
+		<script src="./js/levels/level1.js" defer></script>
+		<script src="./js/controls.js" defer></script>
+		<script src="./js/game.js" defer></script>
+	</head>
+	<body>
+		<div class="fullscreen" id="fullscreen">
+			<div id="navigationBar" class="navigationBar">
+				<div onclick="startGame()" id="startRestart" class="menuButtonsContainer">
+					<img class="navigationButtons" alt="play" title="play"/>
+					<img id="startIcon" class="navigationButtons start" src="./img/11_playButtons/start.png" alt="play" title="play"/>
+				</div>
+				<div onclick="openFullscreen();" id="fullScreenButton" class="menuButtonsContainer">
+					<img class="navigationButtons" src="./img/10_navbar/verkleinern.png" alt="toggle fullscreen" title="toggle fullscreen"/>
+					<img id="fullscreenIcon" class="navigationButtons fullscreenIcon" src="./img/10_navbar/erweitern.png" alt="toggle fullscreen" title="toggle fullscreen"/>
+				</div>
+				<div onclick="toggleSounds()" class="menuButtonsContainer">
+					<img class="navigationButtons" src="./img/10_navbar/audio-off.png" alt="sound switch" title="sound switch"/>
+					<img id="soundOnIcon" class="navigationButtons soundOnIcon" src="./img/10_navbar/Audio-on.png" alt="sound switch" title="sound switch"/>
+				</div>
+				<div id="restart" class="restart d-none">Press to Restart</div>
+			</div>
+			<canvas id="canvas" width="760" height="480" >
+			</canvas>
+				<div id="startScreen" class="startScreen">
+					<h1>El Pollo Loco</h1>
+				</div>
+				
+				<div id="turn" class="turn d-none"></div>
+				<div id="endScreen" class="endScreen d-none"></div>
+				<div id="loosesEndScreen" class="loosesEndScreen d-none"></div>
+					<!-- Play Buttons: Right side -->
+					<div id="rightSidePlayButtons" class="playButtonsContainer rightSide">
+						<img id="jump" class="navigationButtons backgroundTransparent" src="./img/11_playButtons/aufwartspfeil.png" alt=""/>
+						<img id="throw" class="navigationButtons backgroundTransparent btnBottle" src="./img/11_playButtons/flasche.png" alt=""/>
+					</div>
+					<!-- Play Buttons: Left side -->
+					<div id="leftSidePlayButtons" class="playButtonsContainer leftSide">
+						<!-- walk left button -->
+						<img id="left" class="navigationButtons backgroundTransparent" src="./img/11_playButtons/linker-pfeil.png" alt=""/>
+						<!-- walk right button -->
+						<img id="right" class="navigationButtons backgroundTransparent" src="./img/11_playButtons/rechter-pfeil.png" alt=""/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
