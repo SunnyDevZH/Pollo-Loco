@@ -71,18 +71,18 @@
 				<div id="turn" class="turn d-none"></div>
 				<div id="endScreen" class="endScreen d-none"></div>
 				<div id="loosesEndScreen" class="loosesEndScreen d-none"></div>
-					<!-- Play Buttons: Right side -->
-					<div id="rightSidePlayButtons" class="playButtonsContainer rightSide">
-						<img id="jump" class="navigationButtons backgroundTransparent" src="./img/11_playButtons/aufwartspfeil.png" alt=""/>
-						<img id="throw" class="navigationButtons backgroundTransparent btnBottle" src="./img/11_playButtons/flasche.png" alt=""/>
-					</div>
-					<!-- Play Buttons: Left side -->
-					<div id="leftSidePlayButtons" class="playButtonsContainer leftSide">
-						<!-- walk left button -->
-						<img id="left" class="navigationButtons backgroundTransparent" src="./img/11_playButtons/linker-pfeil.png" alt=""/>
-						<!-- walk right button -->
-						<img id="right" class="navigationButtons backgroundTransparent" src="./img/11_playButtons/rechter-pfeil.png" alt=""/>
-					</div>
+				<!-- Play Buttons: Right side -->
+				<div id="rightSidePlayButtons" class="playButtonsContainer rightSide">
+				  <img id="jump" class="navigationButtons backgroundTransparent" src="./img/11_playButtons/aufwartspfeil.png" alt="" ontouchstart="handleKeyPress('UP', true)" ontouchend="handleKeyPress('UP', false)"/>
+				  <img id="throw" class="navigationButtons backgroundTransparent btnBottle" src="./img/11_playButtons/flasche.png" alt="" ontouchstart="handleKeyPress('D', true)" ontouchend="handleKeyPress('D', false)"/>
+				</div>
+				<!-- Play Buttons: Left side -->
+				<div id="leftSidePlayButtons" class="playButtonsContainer leftSide">
+				  <!-- walk left button -->
+				  	<img class="navigationButtons backgroundTransparent" src="./img/11_playButtons/linker-pfeil.png" alt=""  ontouchstart="handleKeyPress('LEFT', true)" ontouchend="handleKeyPress('LEFT', false)"/>
+					<img class="navigationButtons backgroundTransparent" src="./img/11_playButtons/rechter-pfeil.png" alt="" ontouchstart="handleKeyPress('RIGHT', true)" ontouchend="handleKeyPress('RIGHT', false)"/>
+
+				</div>
 				</div>
 			</div>
 		</div>

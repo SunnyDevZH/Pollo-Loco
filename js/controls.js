@@ -1,3 +1,4 @@
+
 /**
  * Tastatur
  */
@@ -40,52 +41,24 @@ window.addEventListener('keyup', (event) => {
 
 /**
  * Handy
- */
+ */ 
 
-function mobileBtnsListener() {
-	document.getElementById('right').ontouchstart = (e) => {
-		handleEvent(e);
-		keyboard.RIGHT = true;
-	};
-
-	document.getElementById('right').ontouchend = (e) => {
-		handleEvent(e);
-		keyboard.RIGHT = false;
-	};
-
-	document.getElementById('left').ontouchstart = (e) => {
-		handleEvent(e);
-		keyboard.LEFT = true;
-	};
-
-	document.getElementById('left').ontouchend = (e) => {
-		handleEvent(e);
-		keyboard.LEFT = false;
-	};
-
-	document.getElementById('jump').ontouchstart = (e) => {
-		handleEvent(e);
-		keyboard.UP = true;
-	};
-
-	document.getElementById('jump').ontouchend = (e) => {
-		handleEvent(e);
-		keyboard.UP = false;
-	};
-
-	document.getElementById('throw').ontouchstart = (e) => {
-		handleEvent(e);
-		keyboard.D = true;
-	};
-
-	document.getElementById('throw').ontouchend = (e) => {
-		handleEvent(e);
-		keyboard.D = false;
-	};
-}
-
-function handleEvent(e) {
-	if (e.cancelable) {
-		e.preventDefault();
+function handleKeyPress(key, isPressed) {
+	switch (key) {
+	  case 'LEFT':
+		keyboard.LEFT = isPressed;
+		break;
+		case 'RIGHT':
+		keyboard.RIGHT = isPressed;
+		break;
+		case 'UP':
+		keyboard.UP = isPressed;
+		break;
+		case 'D':
+		keyboard.D = isPressed;
+		break;
+	  // Füge weitere Cases hinzu, wenn nötig
 	}
-}
+  }
+
+
