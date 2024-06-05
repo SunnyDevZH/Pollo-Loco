@@ -38,6 +38,12 @@ canvas, .endScreen, .startScreen, .loosesEndScreen {
 	color: red;
 }
 
+.center{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* fullscreen oder body background image? */
 .fullscreen {
 	position: relative;
@@ -147,8 +153,9 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 50px;
-	width: 50px;
+	height: 40px;
+    margin-bottom: -10px;
+    margin-top: 20px;
 	background-color: rgb(199, 219, 231);
 	border-radius: 0.5rem;
 	transition: all 225ms ease-in-out;
@@ -197,12 +204,13 @@ h1 {
 	position: absolute;
 	right: 50px;
 	padding-right: 8px;
+	gap: 10px;
 }
 
 .btnBottle {
 	height: 38px;
 	width: auto;
-	padding: 6px 6px;
+	
 }
 
 .leftSide {
