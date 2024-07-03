@@ -286,6 +286,7 @@ h1 {
 	}
 	.turn{
 		display: block;
+		z-index: 99;
 	}
 }
 
